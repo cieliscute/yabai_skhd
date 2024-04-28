@@ -41,10 +41,10 @@ ctrl + alt - l : yabai -m window --warp east
 # 減少視窗大小(要以第二視窗：即右、下調整視窗為主，用第一視窗調整會有問題)
 # 正常來說還需要再設另另一組才可以適當調整第一視窗、但是覺得太麻煩了
 # 利用Focus視窗切換，再調整大小即可完成相同功能，所以就不重複設定另一組了
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - s : yabai -m window --resize bottom:0:20
-shift + alt - w : yabai -m window --resize top:0:-20
-shift + alt - d : yabai -m window --resize right:20:0
+shift + alt - a : yabai -m window --resize left:-40:0
+shift + alt - s : yabai -m window --resize bottom:0:40
+shift + alt - w : yabai -m window --resize top:0:-40
+shift + alt - d : yabai -m window --resize right:40:0
 
 ###########################################################################
 # 另一組設定如下：
