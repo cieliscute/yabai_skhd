@@ -1,0 +1,35 @@
+# 設定預設使用bsp模式(選項有bsp,stack,float)
+yabai -m config layout bsp
+
+# 設定有新視窗的時候，會分割視窗並放在下(右)方
+yabai -m config window_placement second_child
+
+# Padding設定-設定螢幕邊界間隔、以及各視窗之間的間隔
+yabai -m config top_padding 4
+yabai -m config bottom_padding 4
+yabai -m config left_padding 4
+yabai -m config right_padding 4
+yabai -m config window_gap 8
+
+# 滑鼠設定
+# 使用鍵盤聚焦不同視窗時，滑鼠也會跟著移動到該視窗
+yabai -m config mouse_follows_focus on
+
+# 設定當按住alt的時候可以用滑鼠可以啟用yabai額外視窗功能如下
+yabai -m config mouse_modifier alt
+# 設定alt+滑鼠左鍵拖曳來移動視窗
+yabai -m config mouse_action1 move
+# 設定alt+滑鼠右鍵拖曳來調整視窗大小
+yabai -m config mouse_action2 resize
+
+# 設定拖曳到視窗中心時將目前拖曳視窗與拖曳中心視窗交換
+yabai -m mouse_drop_action swap
+
+# 設定黑名單-yabai不會主動來管理下方的APP視窗。
+yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Calculators$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
+yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off

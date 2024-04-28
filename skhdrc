@@ -1,0 +1,94 @@
+# 更改Focus的視窗
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# 更改延伸螢幕(多螢幕)的Focus (記憶法：右手向上位移)
+alt - u : yabai -m display --focus south
+alt - i : yabai -m display --focus north
+alt - y : yabai -m display --focus west
+alt - o : yabai -m display --focus east
+
+# Layout佈局
+# 佈局順時針旋轉90度
+shift + alt - r : yabai -m space --rotate 270
+# 佈局左右鏡射
+shift + alt - y : yabai -m space --mirror y-axios
+# 佈局上下鏡射
+shift + alt - x : yabai -m space --mirror x-axios
+# 將目前Focus視窗移出yabai管理中(float出來)
+shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# 將目前Focus視窗最大化(再次執行時恢復)(記憶法：m=max-min)
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+# 將視窗恢復到預設平衡分割(當有調整過視窗大小時使用)(記憶法：b=balance)
+shift + alt - b : yabai -m space --balance
+
+# 視窗置換
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+# 視窗移動+分割
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+
+# 減少視窗大小(要以第二視窗：即右、下調整視窗為主，用第一視窗調整會有問題)
+# 正常來說還需要再設另另一組才可以適當調整第一視窗、但是覺得太麻煩了
+# 利用Focus視窗切換，再調整大小即可完成相同功能，所以就不重複設定另一組了
+shift + alt - a : yabai -m window --resize left:-20:0
+shift + alt - s : yabai -m window --resize bottom:0:20
+shift + alt - w : yabai -m window --resize top:0:-20
+shift + alt - d : yabai -m window --resize right:20:0
+
+###########################################################################
+# 另一組設定如下：
+# shift + cmd - a : yabai -m window --resize left:20:0
+# shift + cmd - s : yabai -m window --resize bottom:0:-20
+# shift + cmd - w : yabai -m window --resize top:0:20
+# shift + cmd - d : yabai -m window --resize right:-20:0
+###########################################################################
+
+# 將目前Focus的視窗移動到上一個螢幕空間(macOS的上一個桌面編號) ps:  0x21 = [
+shift+ alt - 0x21 : yabai -m window --space prev
+# 將目前Focus的視窗移動到下一個螢幕空間(macOS的下一個桌面編號) ps:  0x1E = ]
+shift+ alt - 0x1E : yabai -m window --space next
+
+# 將Focus視窗移動到指定的螢幕空間(e.g:桌面1,桌面2...)
+# 需注意，全螢幕等等的視窗也會視為螢幕空間(所以編號只能當作參考)
+# shift + alt - 1 : yabai -m window --space 1;
+# shift + alt - 2 : yabai -m window --space 2;
+# shift + alt - 3 : yabai -m window --space 3;
+# shift + alt - 4 : yabai -m window --space 4;
+# shift + alt - 5 : yabai -m window --space 5;
+# shift + alt - 6 : yabai -m window --space 6;
+# shift + alt - 7 : yabai -m window --space 7;
+# shift + alt - 8 : yabai -m window --space 8;
+# shift + alt - 9 : yabai -m window --space 9;
+shift + alt - 1 : yabai -m window --display 1 --space 1
+shift + alt - 2 : yabai -m window --display 2 --space 2
+shift + alt - 3 : yabai -m window --display 3 --space 3
+shift + alt - 4 : yabai -m window --display 4 --space 4
+shift + alt - 5 : yabai -m window --display 5 --space 5
+shift + alt - 6 : yabai -m window --display 6 --space 6
+shift + alt - 7 : yabai -m window --display 7 --space 7
+shift + alt - 8 : yabai -m window --display 8 --space 8
+shift + alt - 9 : yabai -m window --display 9 --space 9
+
+
+# 在不同的實體螢幕之間移動
+shift + alt - u : yabai -m window --display south; yabai -m display --focus south;
+shift + alt - i : yabai -m window --display north; yabai -m display --focus north;
+shift + alt - y : yabai -m window --display west; yabai -m display --focus west;
+shift + alt - o : yabai -m window --display east; yabai -m display --focus east;
+
+
+# Start/Stop Yabai
+ctrl + alt + cmd - s : yabai --start-service
+ctrl + alt + cmd - q : yabai --stop-service
+
