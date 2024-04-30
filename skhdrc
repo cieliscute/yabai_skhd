@@ -100,3 +100,4 @@ shift + alt - o : yabai -m window --display east; yabai -m display --focus east;
 # Start/Stop Yabai
 ctrl + alt + cmd - s : yabai --start-service
 ctrl + alt + cmd - q : yabai --stop-service
+

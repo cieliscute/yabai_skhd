@@ -5,11 +5,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Padding設定-設定螢幕邊界間隔、以及各視窗之間的間隔
-yabai -m config top_padding 4
-yabai -m config bottom_padding 4
-yabai -m config left_padding 4
-yabai -m config right_padding 4
-yabai -m config window_gap 8
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 12
 
 # 滑鼠設定
 # 使用鍵盤聚焦不同視窗時，滑鼠也會跟著移動到該視窗
