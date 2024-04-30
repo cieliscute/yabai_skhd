@@ -27,9 +27,8 @@ yabai -m mouse_drop_action swap
 
 # 設定黑名單-yabai不會主動來管理下方的APP視窗。
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Calculators$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-# yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Karabiner-Elements|Karabiner-EventViewer" manage=off
+# yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off

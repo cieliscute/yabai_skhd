@@ -1,3 +1,7 @@
+# Note that "hyper" mapped to Shift + Ctrl + Opt + Cmd
+
+
+
 # 更改Focus的視窗
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
@@ -14,11 +18,11 @@ alt - o : yabai -m display --focus east
 # 佈局順時針旋轉90度
 shift + alt - r : yabai -m space --rotate 270
 # 佈局左右鏡射
-shift + alt - y : yabai -m space --mirror y-axios
+# shift + alt - y : yabai -m space --mirror y-axios
 # 佈局上下鏡射
-shift + alt - x : yabai -m space --mirror x-axios
+# shift + alt - x : yabai -m space --mirror x-axios
 # 將目前Focus視窗移出yabai管理中(float出來)
-shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+shift + alt - f : yabai -m window --toggle float --grid 6:6:1:1:4:4
 
 # 將目前Focus視窗最大化(再次執行時恢復)(記憶法：m=max-min)
 shift + alt - m : yabai -m window --toggle zoom-fullscreen
@@ -61,24 +65,15 @@ shift+ alt - 0x1E : yabai -m window --space next
 
 # 將Focus視窗移動到指定的螢幕空間(e.g:桌面1,桌面2...)
 # 需注意，全螢幕等等的視窗也會視為螢幕空間(所以編號只能當作參考)
-shift + alt - 1 : yabai -m window --space 1 --focus
-shift + alt - 2 : yabai -m window --space 2 --focus
-shift + alt - 3 : yabai -m window --space 3 --focus
-shift + alt - 4 : yabai -m window --space 4 --focus
-shift + alt - 5 : yabai -m window --space 5 --focus
-shift + alt - 6 : yabai -m window --space 6 --focus
-shift + alt - 7 : yabai -m window --space 7 --focus
-shift + alt - 8 : yabai -m window --space 8 --focus
-shift + alt - 9 : yabai -m window --space 9 --focus
-# shift + alt - 1 : yabai -m window --display 1 --space 1
-# shift + alt - 2 : yabai -m window --display 2 --space 2
-# shift + alt - 3 : yabai -m window --display 3 --space 3
-# shift + alt - 4 : yabai -m window --display 4 --space 4
-# shift + alt - 5 : yabai -m window --display 5 --space 5
-# shift + alt - 6 : yabai -m window --display 6 --space 6
-# shift + alt - 7 : yabai -m window --display 7 --space 7
-# shift + alt - 8 : yabai -m window --display 8 --space 8
-# shift + alt - 9 : yabai -m window --display 9 --space 9
+hyper - 1 : yabai -m window --space 1 --focus
+hyper - 2 : yabai -m window --space 2 --focus
+hyper - 3 : yabai -m window --space 3 --focus
+hyper - 4 : yabai -m window --space 4 --focus
+hyper - 5 : yabai -m window --space 5 --focus
+hyper - 6 : yabai -m window --space 6 --focus
+hyper - 7 : yabai -m window --space 7 --focus
+hyper - 8 : yabai -m window --space 8 --focus
+hyper - 9 : yabai -m window --space 9 --focus
 
 
 # 在不同的實體螢幕之間移動
