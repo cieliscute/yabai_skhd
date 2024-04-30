@@ -32,7 +32,7 @@ alt - o : yabai -m display --focus east
 
 # Layout佈局
 # 佈局順時針旋轉90度
-shift + alt - r : yabai -m space --rotate 270
+# shift + alt - r : yabai -m space --rotate 270
 # 將目前Focus視窗移出yabai管理中(float出來)
 shift + alt - f : yabai -m window --toggle float --grid 6:6:1:1:4:4
 
@@ -101,3 +101,9 @@ shift + alt - o : yabai -m window --display east; yabai -m display --focus east;
 ctrl + alt + cmd - s : yabai --start-service
 ctrl + alt + cmd - q : yabai --stop-service
 
+
+# 試驗
+# 創建stack(c:create)
+hyper - c : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
+# 在stack中間切換(n:next)
+hyper - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
