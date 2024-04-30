@@ -3,10 +3,11 @@
 偶然間發現yabai這個視窗管理工具(Tiling Window Management)，使用下來感覺很不錯。  
 打算長期使用，所以就開了一個Repo存放設定檔案，接著在不同電腦中只要clone下來之後用軟連結的方式，就可以直接開始使用了。
 
-並且為了避免各個軟體中間的互相依賴，並沒有另外使用**Karabiner**等等的軟體來輔助hyper key  
-所以在skhd內的設定不會包含hyper key
-
 另外，已經預設透過brew安裝好yabai以及skhd了。如果還沒有安裝的需要先安裝好才執行接下來的內容。
+
+有使用到hyper key，利用karabiner將capslock改為hyper key了，可以視情況調整skhd的設定。
+
+在`karabiner`裡面也會有complex modification對應的json file。
 
 # 使用步驟
 1. 先進到`.config`位置 
@@ -60,3 +61,161 @@ skhd --start-service
    2. 切換至應用程式時，切換至含有應用程式打開視窗的空間 ON
    3. **依據應用程式將視窗分組 OFF** (重要!)
    4. 顯示器有單獨空間 ON
+
+
+--- 
+
+# Karabiner Settings
+Karabiner協助修改Mac鍵盤的映射，最常使用的功能如MacOS的hyperkey:cmd+option+ctrl+shift，我們可以透過將較少使用的capslock替換為同時按下這四個案件，來觸發hyper key。
+
+```
+{
+    "description": "我的個人設定",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "h",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "j",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "down_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "k",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "up_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Change caps_lock to command+control+option+shift.",
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Hyper+H to Ctrl+Left",
+            "from": {
+                "key_code": "h",
+                "modifiers": {
+                    "mandatory": [
+                        "left_shift",
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                        "left_control"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Hyper+L to Ctrl+Left",
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "mandatory": [
+                        "left_shift",
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                        "left_control"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
+```
