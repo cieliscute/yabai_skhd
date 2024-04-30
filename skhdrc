@@ -1,6 +1,22 @@
 # Note that "hyper" mapped to Shift + Ctrl + Opt + Cmd
+# 0x1E = ]
+# 0x21 - [
+# 0x24 - 右命令鍵 (Right Command)
+# 0x25 - 左命令鍵 (Left Command)
+# 0x26 - 左shift鍵
+# 0x27 - 資料夾/大寫鍵
+# 0x28 - 左選項鍵 (Left Option)
+# 0x29 - 左控制鍵 (Left Control)
+# 0x2A - 右shift鍵
+# 0x2B - 右選項鍵 (Right Option)
+# 0x2C - 右控制鍵 (Right Control)
+# 0x2D - 右命令鍵 (Right Command)
+# 0x31 - 空白鍵 (Space)
+# 0x33 - 反斜線 (\)
+# 0x35 - 逗號 (,)
+# 0x30 - Tab鍵
 
-
+############################################################
 
 # 更改Focus的視窗
 alt - j : yabai -m window --focus south
@@ -17,10 +33,6 @@ alt - o : yabai -m display --focus east
 # Layout佈局
 # 佈局順時針旋轉90度
 shift + alt - r : yabai -m space --rotate 270
-# 佈局左右鏡射
-# shift + alt - y : yabai -m space --mirror y-axios
-# 佈局上下鏡射
-# shift + alt - x : yabai -m space --mirror x-axios
 # 將目前Focus視窗移出yabai管理中(float出來)
 shift + alt - f : yabai -m window --toggle float --grid 6:6:1:1:4:4
 
@@ -59,9 +71,9 @@ shift + alt - d : yabai -m window --resize right:40:0
 ###########################################################################
 
 # 將目前Focus的視窗移動到上一個螢幕空間(macOS的上一個桌面編號) ps:  0x21 = [
-shift+ alt - 0x21 : yabai -m window --space prev
+# shift+ alt - 0x21 : yabai -m window --space prev
 # 將目前Focus的視窗移動到下一個螢幕空間(macOS的下一個桌面編號) ps:  0x1E = ]
-shift+ alt - 0x1E : yabai -m window --space next
+# shift+ alt - 0x1E : yabai -m window --space next
 
 # 將Focus視窗移動到指定的螢幕空間(e.g:桌面1,桌面2...)
 # 需注意，全螢幕等等的視窗也會視為螢幕空間(所以編號只能當作參考)
@@ -74,6 +86,8 @@ hyper - 6 : yabai -m window --space 6 --focus
 hyper - 7 : yabai -m window --space 7 --focus
 hyper - 8 : yabai -m window --space 8 --focus
 hyper - 9 : yabai -m window --space 9 --focus
+# Focus在目前滑鼠位置的視窗(在焦點丟失的時候使用) //0x31 = 空白鍵
+hyper - 0x31: yabai -m window --focus mouse
 
 
 # 在不同的實體螢幕之間移動
@@ -86,4 +100,3 @@ shift + alt - o : yabai -m window --display east; yabai -m display --focus east;
 # Start/Stop Yabai
 ctrl + alt + cmd - s : yabai --start-service
 ctrl + alt + cmd - q : yabai --stop-service
-
