@@ -75,9 +75,9 @@ shift + alt - d : yabai -m window --resize right:40:0
 ###########################################################################
 
 # 將目前Focus的視窗移動到上一個螢幕空間(macOS的上一個桌面編號) ps:  0x21 = [
-hyper - 0x21 : yabai -m window --space prev
+hyper - 0x21 : yabai -m window --space prev --focus
 # 將目前Focus的視窗移動到下一個螢幕空間(macOS的下一個桌面編號) ps:  0x1E = ]
-hyper - 0x1E : yabai -m window --space next
+hyper - 0x1E : yabai -m window --space next --focus
 
 # 將Focus視窗移動到指定的螢幕空間(e.g:桌面1,桌面2...)
 # 需注意，全螢幕等等的視窗也會視為螢幕空間(所以編號只能當作參考)
