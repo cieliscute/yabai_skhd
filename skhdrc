@@ -36,7 +36,7 @@ hyper - o : yabai -m display --focus east
 
 # Layout佈局
 # 佈局順時針旋轉90度
-# shift + alt - r : yabai -m space --rotate 270
+shift + alt - r : yabai -m space --rotate 270
 # 將目前Focus視窗移出yabai管理中(float出來)
 shift + alt - f : yabai -m window --toggle float --grid 6:6:1:1:4:4
 
