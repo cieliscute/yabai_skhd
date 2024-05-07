@@ -144,6 +144,26 @@
                 }
             ],
             "type": "basic"
+        },
+        {
+            "description": "Hyper+D to backspace",
+            "from": {
+                "key_code": "d",
+                "modifiers": {
+                    "mandatory": [
+                        "left_shift",
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "delete_or_backspace"
+                }
+            ],
+            "type": "basic"
         }
     ]
 }
