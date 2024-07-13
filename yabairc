@@ -26,6 +26,8 @@ yabai -m config mouse_action2 resize
 yabai -m mouse_drop_action swap
 
 # 設定黑名單-yabai不會主動來管理下方的APP視窗。
+#如line貼圖之類的彈出式視窗，一開始沒有名稱，會抓取不到，所以設定空字串也要套用不在管理內的規則，才不會分割出視窗
+yabai -m rule --add title="^$" manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Calculators$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
